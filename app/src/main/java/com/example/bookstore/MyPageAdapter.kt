@@ -9,7 +9,7 @@ class MyPageAdapter (fm : FragmentManager) : FragmentPagerAdapter(fm){
     val pageNumber = 3
 
     override fun getItem(position: Int): Fragment {
-        when(position){
+        return when(position){
             0 -> FragmentOne()
             1 -> FragmentTwo()
             3 -> FragmentThree()
