@@ -12,7 +12,7 @@ class MyPageAdapter (fm : FragmentManager) : FragmentPagerAdapter(fm){
         return when(position){
             0 -> FragmentOne()
             1 -> FragmentTwo()
-            3 -> FragmentThree()
+            2 -> FragmentThree()
 
             else -> FragmentOne()
         }
@@ -20,5 +20,15 @@ class MyPageAdapter (fm : FragmentManager) : FragmentPagerAdapter(fm){
 
     override fun getCount(): Int {
         return pageNumber
+    }
+
+    override fun getPageTitle(position: Int): CharSequence? {
+        return when(position){
+            0 -> "top"
+            1 -> "children"
+            2 -> "fiction"
+
+            else -> ""
+        }
     }
 }
