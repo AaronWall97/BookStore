@@ -18,6 +18,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        setSupportActionBar(findViewById(R.id.toolbar))
+
         viewPager = findViewById(R.id.viewPager)
         tabLayout = findViewById(R.id.tab_layout)
 
