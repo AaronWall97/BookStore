@@ -11,12 +11,14 @@ import androidx.appcompat.app.ActionBar
 import de.hdodenhof.circleimageview.CircleImageView
 import android.content.SharedPreferences
 import android.util.Log
+import android.widget.Button
 import java.io.IOException
 
 
 class ProfileActivity : AppCompatActivity() {
 
     private lateinit var profileImage : CircleImageView
+    private lateinit var saveButton : Button
 
     companion object {
         private const val SELECT_IMAGE = 1
@@ -28,6 +30,7 @@ class ProfileActivity : AppCompatActivity() {
 
 
         profileImage = findViewById(R.id.circle_image_view)
+        saveButton = findViewById(R.id.save)
 
 
         setSupportActionBar(findViewById(R.id.include))
