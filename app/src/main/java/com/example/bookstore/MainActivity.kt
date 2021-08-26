@@ -3,6 +3,7 @@ package com.example.bookstore
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.ContactsContract
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBar
 import androidx.core.view.GravityCompat
@@ -42,6 +43,8 @@ class MainActivity : AppCompatActivity() {
             menuItem ->
             when(menuItem.itemId){
                 R.id.profile -> {
+                    val intent = Intent(this@MainActivity, ProfileActivity::class.java)
+                    startActivity(intent)
 
                 }
                     R.id.about ->{
