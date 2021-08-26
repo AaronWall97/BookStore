@@ -3,6 +3,7 @@ package com.example.bookstore
 
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.graphics.BitmapFactory
 import androidx.appcompat.app.AppCompatActivity
@@ -12,21 +13,28 @@ import de.hdodenhof.circleimageview.CircleImageView
 import android.content.SharedPreferences
 import android.util.Log
 import android.widget.Button
+import kotlinx.android.synthetic.main.activity_profile.*
 import java.io.IOException
 
 
 class ProfileActivity : AppCompatActivity() {
 
+    private lateinit var sharedPref : SharedPreferences
     private lateinit var profileImage : CircleImageView
     private lateinit var saveButton : Button
 
     companion object {
+        const val SHAREDPREFS = "mysharedprefs"
+        const val FIRST_NAME = "firstname"
+        const val LAST_NAME = "lastname"
         private const val SELECT_IMAGE = 1
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
+
+        sharedPref = this.getSharedPreferences(SHAREDPREFS, Context.MODE_PRIVATE) ?: return
 
 
         profileImage = findViewById(R.id.circle_image_view)
@@ -49,6 +57,13 @@ class ProfileActivity : AppCompatActivity() {
             startActivityForResult(Intent.createChooser(intent,"Select Picture"), SELECT_IMAGE)
         }
 
+        saveButton.setOnClickListener{
+            with(sharedPref.edit()){
+                putString(FIRST_NAME, first_name.text.toString())
+                putString(LAST_NAME, last_name.text.toString())
+                apply()
+            }
+        }
 
 
     }
