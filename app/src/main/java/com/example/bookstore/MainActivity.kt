@@ -1,5 +1,6 @@
 package com.example.bookstore
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,8 +10,12 @@ import androidx.appcompat.app.ActionBar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.viewpager.widget.ViewPager
+import com.example.bookstore.ProfileActivity.Companion.FIRST_NAME
+import com.example.bookstore.ProfileActivity.Companion.LAST_NAME
+import com.example.bookstore.ProfileActivity.Companion.SHAREDPREFS
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.tabs.TabLayout
+import kotlinx.android.synthetic.main.nav_header.view.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -73,6 +78,14 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when(item?.itemId){
             android.R.id.home ->{
+
+                val sharedPrefs = this.getSharedPreferences(SHAREDPREFS, Context.MODE_PRIVATE)
+
+                val firstName = sharedPrefs.getString(FIRST_NAME, "name")
+                val lastName = sharedPrefs.getString(LAST_NAME, "lastname")
+
+                drawerLayout.full_name.text = "$firstName $lastName"
+
                 drawerLayout.openDrawer(GravityCompat.START)
                 true
             }

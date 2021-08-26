@@ -21,6 +21,16 @@ class FragmentThree : Fragment() {
             R.drawable.fiction_three,R.drawable.fiction_four,
             R.drawable.fiction_five, R.drawable.fiction_six,
             R.drawable.fiction_seven, R.drawable.fiction_eight,
+            R.drawable.fiction_nine, R.drawable.fiction_ten,
+            R.drawable.fiction_one, R.drawable.fiction_two ,
+            R.drawable.fiction_three,R.drawable.fiction_four,
+            R.drawable.fiction_five, R.drawable.fiction_six,
+            R.drawable.fiction_seven, R.drawable.fiction_eight,
+            R.drawable.fiction_nine, R.drawable.fiction_ten,
+            R.drawable.fiction_one, R.drawable.fiction_two ,
+            R.drawable.fiction_three,R.drawable.fiction_four,
+            R.drawable.fiction_five, R.drawable.fiction_six,
+            R.drawable.fiction_seven, R.drawable.fiction_eight,
             R.drawable.fiction_nine, R.drawable.fiction_ten
     )
 

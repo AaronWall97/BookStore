@@ -22,7 +22,19 @@ class FragmentOne : Fragment() {
             R.drawable.top_three,R.drawable.top_four,
             R.drawable.top_five,R.drawable.top_six,
             R.drawable.top_seven,R.drawable.top_eight,
+            R.drawable.top_nine,R.drawable.top_ten,
+            R.drawable.top_one,R.drawable.top_two,
+            R.drawable.top_three,R.drawable.top_four,
+            R.drawable.top_five,R.drawable.top_six,
+            R.drawable.top_seven,R.drawable.top_eight,
+            R.drawable.top_nine,R.drawable.top_ten,
+            R.drawable.top_one,R.drawable.top_two,
+            R.drawable.top_three,R.drawable.top_four,
+            R.drawable.top_five,R.drawable.top_six,
+            R.drawable.top_seven,R.drawable.top_eight,
             R.drawable.top_nine,R.drawable.top_ten
+
+
 
     )
 

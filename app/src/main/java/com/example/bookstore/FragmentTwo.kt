@@ -21,6 +21,16 @@ class FragmentTwo : Fragment() {
             R.drawable.children_three,R.drawable.children_four,
             R.drawable.children_five,R.drawable.children_six,
             R.drawable.children_seven,R.drawable.children_eight,
+            R.drawable.children_nine,R.drawable.children_ten,
+            R.drawable.children_one,R.drawable.children_two,
+            R.drawable.children_three,R.drawable.children_four,
+            R.drawable.children_five,R.drawable.children_six,
+            R.drawable.children_seven,R.drawable.children_eight,
+            R.drawable.children_nine,R.drawable.children_ten,
+            R.drawable.children_one,R.drawable.children_two,
+            R.drawable.children_three,R.drawable.children_four,
+            R.drawable.children_five,R.drawable.children_six,
+            R.drawable.children_seven,R.drawable.children_eight,
             R.drawable.children_nine,R.drawable.children_ten
     )
 
